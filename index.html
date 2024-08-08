@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="shortcut icon" href="ok.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Verificar</title>
+
+
+
+</head>
+
+<body>
+    <div id="main">
+        <div class="conteiner">
+            <div id="icone" class="icone">
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+            </div>
+            <div >
+                <p id="texto" class="texto">Pode voltar para o App</p>
+            </div>
+            <button class="botao" onclick="fecharPagina()">Fechar Página</button>
+        </div>
+
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        function fecharPagina() {
+            window.close();
+            console.log("foi") // Fecha a página
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const icone = document.getElementById('icone');
+
+            // Função para iniciar a animação
+            function iniciarPiscar() {
+                icone.style.opacity = 1;
+                icone.style.animation = 'piscar 0.8s infinite'; // Inicia a animação
+            }
+
+            // Função para parar a animação
+            function pararPiscar() {
+                icone.style.animation = 'none'; // Remove a animação
+                icone.style.opacity = 0; // Garante que o ícone fique visível
+                icone.style.display ="none"
+            }
+
+            // Inicia o piscar após 500ms
+            setTimeout(iniciarPiscar, 0);
+
+            // Para o piscar após 5 segundos
+            setTimeout(pararPiscar, 3200); // 5000ms = 5 segundos
+
+            setTimeout(() => {
+                const botao = document.querySelector(".botao")
+                botao.style.opacity = 1
+            }, 4300)
+            setTimeout(() => {
+
+                const texto = document.querySelector("#texto")
+                texto.style.opacity = 1
+            }, 3500)
+        });
+
+
+    </script>
+
+</body>
+
+</html>

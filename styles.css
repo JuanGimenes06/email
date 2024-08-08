@@ -1,0 +1,77 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.icone {
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    transition: opacity 0.5s;
+    opacity: 0;
+
+}
+
+@keyframes piscar {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.texto {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    margin-top: 5px;
+    opacity: 0  ;
+    transition: opacity 0.5s;
+}
+
+#main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao {
+    background-color: #f0f0f0;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-top: 25px;
+    opacity: 0  ;
+    transition: opacity 0.5s;
+
+}
+
+.conteiner {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.botao:hover {
+    background-color: #dadada;
+    transition: 0.3ms;
+    cursor: pointer;
+}
